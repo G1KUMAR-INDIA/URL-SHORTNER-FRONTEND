@@ -9,7 +9,7 @@ const UrlShortenerForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://urlshortnerbackend.netlify.app/api/url/shorten', { originalUrl });
+      const res = await axios.post('https://url-shortner-backend-ugvt.onrender.com/api/url/shorten', { originalUrl });
       setShortUrl(res.data.shortUrl);
       setQrCode(res.data.qrCode);
     } catch (err) {
